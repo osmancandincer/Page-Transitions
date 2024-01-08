@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_nav"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.egitim.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/aSayfaGecis"
+            app:destination="@id/asayfaFragment" />
+        <action
+            android:id="@+id/xSayfaGecis"
+            app:destination="@id/xsayfaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/asayfaFragment"
+        android:name="com.example.egitim.AsayfaFragment"
+        android:label="fragment_asayfa"
+        tools:layout="@layout/fragment_asayfa" >
+        <action
+            android:id="@+id/bSayfaGecis"
+            app:destination="@id/bsayfaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bsayfaFragment"
+        android:name="com.example.egitim.BsayfaFragment"
+        android:label="fragment_bsayfa"
+        tools:layout="@layout/fragment_bsayfa" >
+        <action
+            android:id="@+id/ySayfaGecis"
+            app:destination="@id/ysayfaFragment"
+            app:popUpTo="@id/anasayfaFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/xsayfaFragment"
+        android:name="com.example.egitim.XsayfaFragment"
+        android:label="fragment_xsayfa"
+        tools:layout="@layout/fragment_xsayfa" >
+        <action
+            android:id="@+id/ySayfaGecis2"
+            app:destination="@id/ysayfaFragment"
+            app:popUpTo="@id/anasayfaFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/ysayfaFragment"
+        android:name="com.example.egitim.YsayfaFragment"
+        android:label="fragment_ysayfa"
+        tools:layout="@layout/fragment_ysayfa" />
+</navigation>
